@@ -1,0 +1,49 @@
+-- "INNER JOIN" same as just "J0iN"
+SELECT 
+	s.coffeeshop_name,
+	l.city,
+	l.country
+FROM (
+	shops s
+	inner JOIN locations as l
+	ON s.city_id = l.city_id
+);
+
+SELECT
+  s.coffeeshop_name,
+  l.city,
+  l.country
+FROM
+  shops s
+  JOIN locations l
+  ON s.city_id = l.city_id;
+
+-- LEFT JOIN
+SELECT
+  s.coffeeshop_name,
+  l.city,
+  l.country
+FROM
+	shops s
+	LEFT JOIN locations l
+	ON s.city_id = l.city_id;
+
+-- RIGHT JOIN
+SELECT
+  s.coffeeshop_name,
+  l.city,
+  l.country
+FROM
+	shops s
+	RIGHT JOIN locations l
+	ON s.city_id = l.city_id;
+
+-- FULL OUTER JOIN
+SELECT
+  s.coffeeshop_name,
+  l.city,
+  l.country
+FROM
+	shops s
+	FULL OUTER JOIN locations l
+	ON s.city_id = l.city_id;
